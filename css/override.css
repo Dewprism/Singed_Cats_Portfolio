@@ -1,0 +1,321 @@
+#main {
+
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+#news {
+	position: relative;
+	background-color: #333;
+	height: 500px;
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+#section {
+    overflow: visible;   
+}
+
+#logo {
+	height: 95px;
+	width: 95px;
+	border: 8px solid #555;
+	border-radius: 15px;
+}
+
+.editart {
+	position:absolute;
+}
+
+/*#button::-moz-focus-inner { 
+	margin-top:-2px; 
+	margin-bottom: -1px; 
+}*/
+
+.yellow {
+	color: #FF6;
+}
+
+.orange {
+	color: #f0ad4e;
+}
+
+.red {
+	color: #d9534f;
+}
+
+.form-control:focus{
+	border-color: #FF6;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255,255,102,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255,255,102,.6)
+}
+
+.btn-default {
+	background-color: #CCC;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.thumbnail {
+	padding: 0;
+	border: 10px solid #333;
+	border-radius: 10px;
+}
+
+.img-circle {
+	height: 140px;
+}
+
+.img-rounded {
+	max-height: 300px;
+	border-radius: 10px;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.collapse.in {
+    margin-top: 47px;
+}
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+html {
+    height: 100%;
+}
+
+body {
+	font-size: 16px;
+	color: #CCC;
+	background-color: #777;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	padding-bottom: 40px;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #5A5A5A 0%, #333 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #5A5A5A 0%, #333 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #5A5A5A 0%, #333 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5A5A5A), color-stop(1, #333));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #5A5A5A 0%, #333 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #5A5A5A 0%, #333 100%);
+}
+
+a {
+	color: #888;
+}
+
+a:hover, a:focus {
+	color: #DDD;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #CCC;
+}
+
+img {
+	background-color: transparent;
+}
+
+label {
+	font-weight: normal;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+.navbar-wrapper .navbar .container {
+  width: 100%;
+}
+
+.navbar-brand {
+	padding-top: 0px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+.carousel-caption {
+	text-shadow: 0 4px 0 black,
+				 1px 1px 0 black,
+				 -1px 1px 0 black,
+				 0 4px 2px black,
+				 0 1px 10px #DD6;
+}
+
+.carousel-caption  > h1 {
+	font-size: 50px;
+	color: #CCC;
+	font-weight: bold;
+}
+
+.carousel-caption > p {
+	text-shadow: 0 2px 0 black,
+				 1px 1px 0 black,
+				 -1px 1px 0 black,
+				 0 2px 2px black;
+	/*color: #d9534f;*/
+	color: white;
+}
+
+/* Carousel base class */
+.carousel {
+  overflow: hidden;
+  height: 500px;
+  margin-bottom: 60px;
+  border-radius: 50px;
+  padding: 0;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	opacity: 0.3;
+	-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+.carousel-caption:hover {
+	opacity: 1;
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.carousel-caption .btn-warning:hover {
+    background-color: #f0ad4e;   
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: transparent;
+}
+.carousel-inner > .item > img {
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/*@media (min-width: 768px) {
+
+  /* Navbar positioning foo 
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners 
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content 
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+} */
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

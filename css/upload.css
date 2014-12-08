@@ -1,0 +1,62 @@
+textarea {
+    resize: none;
+}
+
+.section {
+	padding:10px; 
+	margin:0px; 
+	overflow:auto;
+}
+
+.column {
+	position:relative; 
+	float:left;
+}
+
+.btn {
+	float:right;
+}
+
+.error::before {
+	content:"*"; 
+	color:#FF5555; 
+	padding:3px;
+}
+
+.disabled {
+	color:#BBBBEE;
+}
+
+.clear {
+	clear:both;
+}
+
+#upload {
+	width:500px; 
+	margin-top: 50px;
+	margin-left:auto; 
+	margin-right:auto; 
+	margin-bottom:20px; 
+	position:relative; 
+	overflow:auto;
+}
+
+#submission {
+	position:relative; 
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+#center {
+	width:32%; 
+	margin-left:32%;
+}
+
+#left {
+	width:32%; 
+	margin-right:-32%;
+}
+
+#right {
+	width:32%;
+}
