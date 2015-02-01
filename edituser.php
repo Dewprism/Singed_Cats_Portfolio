@@ -27,7 +27,8 @@
     //SAVE
     if (isset($_POST["save"])) {
 		$e = "fail";
-		$userupdate = array("username"=>"'".$_POST["username"]."'", "fname"=>"'".$_POST["fname"]."'", "lname"=>"'".$_POST["lname"]."'", "email"=>"'".$_POST["email"]."'");
+        //Since username field is disabled for now, that field can't be included in the update
+		$userupdate = array(/*"username"=>"'".$_POST["username"]."'", */"fname"=>"'".$_POST["fname"]."'", "lname"=>"'".$_POST["lname"]."'", "email"=>"'".$_POST["email"]."'");
         if ($_POST["password"] != "") $userupdate["password"] = "'".md5($_POST["password"])."'";
 		if ($db->update($userupdate, "users", "id = '".$_POST["userid"]."'")) $e = "success";
         $resetSession = $db->selectSome("fname", "users","id = '$_SESSION[singedcats_userID]'");
@@ -159,8 +160,14 @@
         echo 'value="'.$user["username"].'"';
     ?>
     >
-    <input type="password" class="form-control" placeholder="New Password" id="password" name="password">
-    <input type="password" class="form-control" placeholder="Confirm New Password" id="passwordCheck" name="passwordCheck">
+    <input type="password" class="form-control" placeholder="New Password" id="password" name="password"
+    <?php 
+        //Disabling the ability to change my admin password, because I'm allowing people into my account to demo the site.
+        if ($user['username'] == 'dwallace') echo ' disabled'; ?>       
+    >
+    <input type="password" class="form-control" placeholder="Confirm New Password" id="passwordCheck" name="passwordCheck"
+    <?php if ($user['username'] == 'dwallace') echo ' disabled'; ?>
+    >
     <input type="text" class="form-control" placeholder="First name" id="fname" name="fname" required
     <?php
         echo 'value="'.$user["fname"].'"';

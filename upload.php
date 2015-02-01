@@ -112,7 +112,7 @@
 			</div>
 			<div class="section form-group">
 				<h2 class="orange">Category</h2>
-				<label><input type="radio" name="category" value="Original"> Original</label><br>
+				<label><input type="radio" name="category" value="Original" checked> Original</label><br>
 				<label><input type="radio" name="category" value="Fanart"> Fanart</label>
 			</div>
 			<div class="section">

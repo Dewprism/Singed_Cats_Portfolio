@@ -152,6 +152,7 @@
             //If there's only one result, the array returns differently so this handles that
 			if (isset($art['id'])) {
                 $art['description'] = str_replace('"', '&quot;',$art['description']);
+                $art['description'] = str_replace('\\', '',$art['description']);
 				echo '<div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3">';
 				echo '<form id="form'.$art['id'].'" class="editart" action="edit.php" method="POST">';
                 echo '<input type="hidden" name="artID" value='.$art['id'].'>';
@@ -167,6 +168,7 @@
 			else {
 				foreach ($art as $art) {
                     $art['description'] = str_replace('"', '&quot;',$art['description']);
+                    $art['description'] = str_replace('\\', '',$art['description']);
 					echo '<div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3">';
 					echo '<form id="form'.$art['id'].'" class="editart" action="edit.php" method="POST">';
 					echo '<input type="hidden" name="artID" value='.$art['id'].'>';
@@ -191,6 +193,7 @@
 			//If there's only one result, the array returns differently so this handles that
 			if (isset($art['id'])) {
                 $art['description'] = str_replace('"', '&quot;',$art['description']);
+                $art['description'] = str_replace('\\', '',$art['description']);
 				echo '<div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3">';
 				echo '<a href="images/'.$art['username'].'/'.$art['filename'].'" class="thumbnail" rel="lightbox-gallery" title="'.$art['description'].'">';
 				echo '<img src="images/'.$art['username'].'/'.$art['filename'].'" alt="'.$art['description'].'">';
@@ -201,6 +204,7 @@
 			else {
 				foreach ($art as $art) {
                     $art['description'] = str_replace('"', '&quot;',$art['description']);
+                    $art['description'] = str_replace('\\', '',$art['description']);
 					echo '<div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3">';
 					echo '<a href="images/'.$art['username'].'/'.$art['filename'].'" class="thumbnail" rel="lightbox-gallery" title="'.$art['description'].'">';
 					echo '<img src="images/'.$art['username'].'/'.$art['filename'].'" alt="'.$art['description'].'">';

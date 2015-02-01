@@ -10,7 +10,7 @@
 	if(!isset($_SESSION["singedcats_loggedIn"])) {
         header("Location: login.php");
 	}
-	
+
 	//DELETE
 	//If user has passed a userID, and we're not editing or saving... assume deletion.
 	if (isset($_POST["artID"]) && !isset($_POST["edit"]) && !isset($_POST["save"])) {
@@ -155,7 +155,7 @@ echo '<div id="upload">';
 		echo '<div class="section">';
 			echo '<h2 class="orange">Tags</h2>';
 				$arttag_table = $db->selectSome("tagID","art_tags","artID = ".$_POST['artID']);
-				$arttags = [];
+				$arttags = array();
 				foreach ($arttag_table as $row) {
 					array_push($arttags, $row["tagID"]);
 				}

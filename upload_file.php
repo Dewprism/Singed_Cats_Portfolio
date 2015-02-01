@@ -4,9 +4,6 @@
 
 	require_once 'class/DB.php';
 
-print_r($_POST);
-print_r($_FILES);
-
     $db = new DB();
     $db->connect();
 
@@ -18,8 +15,11 @@ print_r($_FILES);
 
     // Check if image file is a actual image or fake image
     if(isset($_POST["submit"])) {
+        $allowedMimes = array('image/gif', 'image/jpeg', 'image/jpg', 'image/png', 'image/bmp', 'image/wbmp');
         $check = getimagesize($_FILES["file"]["tmp_name"]);
-        if($check !== false) {
+        $type = strtolower($check['mime']);
+        if(in_array($type, $allowedMimes)) {
+        //if($check !== false) {
             //echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
         } else {
